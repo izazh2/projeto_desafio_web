@@ -104,3 +104,36 @@ if(idade < 18){
 }else{
     console.log(`COM ${idade}, O TEMPO PARA RENOVAÇÃO É DE 3 ANOS`)
 }
+
+//TABELA VERDADE
+/* 
+   CONJUNÇÃO -> && E
+   VV V
+   VF F
+   FV F
+   FF F
+
+   DISJUNÇÃO -> || OU
+   VV V 
+   VF v
+   FV V
+   FF F
+*/
+
+/**
+ * AUTORIZAÇÃO DE ACESSO PARA AMBIENTE SEJA DO SEGUINTE MODO
+ * TER IDADE MAIOR OU IGUAL A 18 ANOS E POSSUIR R$1000
+ */
+let valor = 1800
+
+if ((idade => 18) && (valor >= 1000)){
+    console.log("AUTORIZADO O ACESSO")
+}else{
+    console.log("ACESSO NEGADO")
+}
+
+if ((idade => 18) || (valor >= 1000)){
+    console.log("AUTORIZADO O ACESSO")
+}else{
+    console.log("ACESSO NEGADO")
+}
